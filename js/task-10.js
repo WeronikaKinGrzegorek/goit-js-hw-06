@@ -9,6 +9,9 @@ const btnToCreate = document.querySelector("[data-create]");
 const btnToDestroy = document.querySelector("[data-destroy]");
 function createBoxes(amount) {
   amount = inputNumber.value;
+  if (amount > 100) {
+    amount = 100;
+  }
   let boxSize = 30;
   for (let i = 1; i <= amount; i += 1) {
     const box = document.createElement("div");
