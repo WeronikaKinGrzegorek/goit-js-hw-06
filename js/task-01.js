@@ -3,7 +3,7 @@ const message = `Number of categories: ${categories.length}`;
 console.log(message);
 
 for (const category of categories) {
-  console.log(`Category: ${category.firstElementChild.textContent}`);
+  console.log(`Category: ${category.querySelector("h2").textContent}`);
 
-  console.log(`Elements: ${category.lastElementChild.children.length}`);
+  console.log(`Elements: ${category.querySelectorAll("li").length}`);
 }
